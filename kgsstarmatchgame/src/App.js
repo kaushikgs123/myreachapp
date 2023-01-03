@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from "react";
-import { useEffect } from "react";
-import ReactDOM from "react-dom/client";
-
+import './index.css';
+import reportWebVitals from './reportWebVitals';
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
+import "./style.css";
 
 // STAR MATCH - V9
 
@@ -139,7 +140,7 @@ const StarMatch = () => {
 	return <Game key={gameId} startNewGame={() => setGameId(gameId + 1)}/>;
 }
 
-// Color Theme
+
 const colors = {
   available: 'lightgray',
   used: 'lightgreen',
@@ -177,8 +178,9 @@ const utils = {
   },
 };
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<StarMatch />);
+
+ReactDOM.render(<StarMatch />, document.getElementById("root"));
+
 
 
 
